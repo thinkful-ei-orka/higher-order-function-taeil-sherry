@@ -81,12 +81,10 @@ turtleMovements.forEach((movement) => {
 let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 const array = input.split(' ');
 
-let decodedSentence = array.reduce(function(string) {
-    let acc = '';
-    if(string.length === 3) {
+let decodedSentence = array.reduce(function(acc, str) {
+    if(str.length === 3) {
         return acc + ' ';
     } else {
-       return acc + string[string.length - 1].toUpperCase();
+       return acc + str[str.length - 1].toUpperCase();
     }
-});
-
+}, '');
