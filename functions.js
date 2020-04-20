@@ -66,3 +66,13 @@ rocksWarning('Centinela Ave and Olympic Blvd');
 deerWarning('Main St and Broadway Ave');
 slipperyWarning('Augusta Ave and Lake St');
 slipperyWarning('Greenbay Rd and Hawthorn Ave');
+
+
+let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+let filtered = turtleMovements.filter((movement) => movement[0] >= 0 && movement[1] >= 0);
+let totalMovements = turtleMovements.map((movement) => Math.abs(movement[0]) + Math.abs(movement[1]));
+turtleMovements.forEach((movement) => {
+    console.log(`Movement #1: ${Math.abs(movement[0])} steps`);
+    console.log(`Movement #2: ${Math.abs(movement[1])} steps`);
+});
